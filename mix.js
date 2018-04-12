@@ -10,4 +10,5 @@ process.on('message', msg => {
 	cmd.get(
 		`ffmpeg -i ${vPath} -i ${aPath} -map 0:v -map 1:a -c copy ${mPath}`
 	);
+	process.send('hi');
 });
